@@ -1,2 +1,3 @@
-# personalsite
-Space for personla 
+# Home Website
+## Aim to build a personal website 
+Repository for site
