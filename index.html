@@ -24,17 +24,30 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
-
+<body data-spy="scroll" data-target="vertical-menu" data-offset="50">
+    <script>
+        $(window).scroll(function () {
+            $(".header").css("opacity", 1 - $(window).scrollTop() / 350);
+        });
+    </script>
     <div class="jumbotron-fluid vertical-center" data-postion="center center">
-        <div class="container align-self-center">
+        <div class="container align-self-center header">
             <h1 class="display-2">Tim Hanks</h1>
-            <p>This is my story</p>
+            <a href="#intro"><i class="fa fa-angle-down"></i> Explore <i class="fa fa-angle-down"></i></a>
         </div>
     </div>
 
+    <!-- Navigation -->
+    <!--
+        <div class="vertical-menu sticky-top">
+            <a href="#intro" class="active">Profile</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+        </div>
+    -->
+
     <!-- Introduction -->
-    <div class="container-fluid pt-3 bg-grey text-black intro">
+    <div id="intro" class="container-fluid pt-5 bg-grey intro">
         <h1 class="display-4">Nice to meet you</h1><br />
         <div class="row">
             <div class="col-md-3"></div>
@@ -47,8 +60,8 @@
             </div>
             <div class="col-md-4">
                 <p>Hi, I'm Tim.</p>
-                <p> An Engineer, a piano player, a top 100 fantasy footballer, an occasinal runner, an awful dancer and a lover of the outdoors.</p>
-                <p>I enjoy my job but also like to have personal projects on the go. In general, I have a very positive outlook on life but (I suspect like many people) I retain an underlying fear that I could be doing more!</p>
+                <p> An Engineer, a piano player, a top 100 fantasy footballer, an occasinal runner, an awful dancer and an enjoyer of the outdoors.</p>
+                <p>I enjoy my job but also like to have personal projects on the go. I have a positive outlook on life but retain an underlying fear that I could be doing more!</p>
                 <p>This site is to introduce you to me, my background, my interests. So if you find some commonality with me, please do get in touch. </p>
             </div>
             <div class="col-md-3"></div>
@@ -56,7 +69,7 @@
     </div>
     <hr />
     <!-- Experience -->
-    <div class="container-fluid pt-3 bg-light text-blue experience">
+    <div id="experience" class="container-fluid pt-5 bg-light experience">
         <br />
         <h1 class="display-4">Experience</h1>
         <br />
@@ -65,10 +78,10 @@
                 <a class="nav-link active" data-toggle="tab" href="#home">Growing Up</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#menu1">Becoming a Consultant</a>
+                <a class="nav-link" data-toggle="tab" href="#menu1">Consultanting</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#menu2">Start-up experinec</a>
+                <a class="nav-link" data-toggle="tab" href="#menu2">Energy Start-Up</a>
             </li>
         </ul>
         <div class="tab-content">
@@ -99,7 +112,7 @@
     </div>
     <hr />
     <!-- Skills -->
-    <div class="container-fluid pt-3 bg-grey text-black">
+    <div id="skills" class="container-fluid pt-5 bg-grey">
         <h1 class="display-4">Skills</h1>
         <br />
         <div class="row">
@@ -226,7 +239,6 @@
 
 
     <!-- Projects -->
-
     <!-- Contact -->
     <!-- Site footer -->
     <footer class="site-footer">
@@ -234,27 +246,16 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <h6>About</h6>
-                    <p class="text-justify">This is a website which does the very basics, presenting an image of who I am to the world.</p>
+                    <p>This was developed by Tim Hanks as a personal project to create a interactive profile on the web. It was a way of developing front-end web skills as well a more-personlable interactive CV.</p>
+                    <p>If you feel inspired by this, or want to copy any of the code, please feel free to do so.</p>
                 </div>
-                <div class="col-xs-6 col-md-6">
+                <div class="col-xs-6 col-md-6 footer-links">
                     <h6>Get in Tough</h6>
-                    <ul class="footer-links">
-                        <li><a class="email" href="mailto:th0590@my.bristol.ac.uk"><i class="fa fa-envelope"> - Email</i></a></li>
-                        <li><a class="linkedin" href="www.linkedin.com/in/tim-hanks-01547790"><i class="fa fa-linkedin"> - Linked In</i></a></li>
-                    </ul>
+                    <p><a href="mailto:th0590@my.bristol.ac.uk">Send me a question: <i class="fa fa-envelope"></i></a></p>
+                    <p><a href="https://www.linkedin.com/in/tim-hanks-01547790">Add me on LinkedIn:  <i class="fa fa-linkedin"></i></p>
                 </div>
             </div>
             <hr>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">
-                        Copyright &copy; Open to all
-                        <a href="">Tim Hnasnk</a>.
-                    </p>
-                </div>
-            </div>
         </div>
     </footer>
 

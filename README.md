@@ -7,4 +7,9 @@ To develop a web presence
 
 # Status
 Hosted on GitHub pages, using customer domain name. 
-Future plans to link to blogs
+
+# To Do
+Link to blog pages
+Visualise skills using Radar charts
+Add in development objectives
+
